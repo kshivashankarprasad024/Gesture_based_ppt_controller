@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture Control Presentation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-hand-paper"></i>
+                <h1>Gesture Control</h1>
+            </div>
+            <p class="tagline">Control your presentations with hand gestures</p>
+        </header>
+ 
+        <main>
+            <section class="control-panel">
+                <button id="startBtn" class="start-btn">
+                    <i class="fas fa-play"></i>
+                    Start Presentation
+                </button>
+                <div id="statusMessage" class="status-message"></div>
+            </section>
+ 
+            <section class="instructions">
+                <h2><i class="fas fa-info-circle"></i> Gesture Guide</h2>
+                <div class="gesture-grid">
+                    <div class="gesture-card">
+                        <div class="gesture-icon">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li>Move hand right → Next slide</li>
+                            <li>Move hand left → Previous slide</li>
+                        </ul>
+                    </div>
+ 
+                    <div class="gesture-card">
+                        <div class="gesture-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Zoom Control</h3>
+                        <ul>
+                            <li>Pinch up → Zoom in</li>
+                            <li>Pinch down → Zoom out</li>
+                        </ul>
+                    </div>
+ 
+                    <div class="gesture-card">
+                        <div class="gesture-icon">
+                            <i class="fas fa-hand-peace"></i>
+                        </div>
+                        <h3>End Presentation</h3>
+                        <ul>
+                            <li>Hold three fingers up for 1 second</li>
+                            <li>Press ESC key to exit manually</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+ 
+        <footer>
+            <p>Created with <i class="fas fa-heart"></i> by Team ALPHAS</p>
+            <p class="version">Version 1.0</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+ 

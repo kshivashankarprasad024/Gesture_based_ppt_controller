@@ -1,0 +1,254 @@
+:root {
+    /* Elegant color palette */
+    --primary-color: #2c3e50;      /* Deep blue-gray */
+    --secondary-color: #34495e;     /* Darker blue-gray */
+    --accent-color: #c0392b;        /* Deep red */
+    --text-color: #2c3e50;         /* Dark blue-gray for text */
+    --bg-color: #ecf0f1;           /* Light gray background */
+    --card-bg: #ffffff;            /* White */
+    --hover-color: #e74c3c;        /* Bright red for hover */
+    --success-color: #27ae60;      /* Green */
+    --info-color: #3498db;         /* Blue */
+    --warning-color: #f39c12;      /* Orange */
+    --error-color: #c0392b;        /* Red */
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 1rem;
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.logo i {
+    font-size: 2.5rem;
+    color: #ecf0f1;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+/* Control Panel Styles */
+.control-panel {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.start-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    box-shadow: var(--shadow);
+}
+
+.start-btn:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+.start-btn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Instructions Styles */
+.instructions {
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 3rem;
+}
+
+.instructions h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.8rem;
+}
+
+.gesture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.gesture-card {
+    background-color: var(--bg-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(44, 62, 80, 0.1);
+}
+
+.gesture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: var(--primary-color);
+}
+
+.gesture-icon {
+    font-size: 2.2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.gesture-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.gesture-card ul {
+    list-style: none;
+}
+
+.gesture-card li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--secondary-color);
+}
+
+.gesture-card li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* Status Message Styles */
+.status-message {
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    display: none;
+    font-weight: 500;
+}
+
+.status-message.info {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: var(--info-color);
+    border: 1px solid var(--info-color);
+    display: block;
+}
+
+.status-message.success {
+    background-color: rgba(39, 174, 96, 0.1);
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
+    display: block;
+}
+
+.status-message.error {
+    background-color: rgba(192, 57, 43, 0.1);
+    color: var(--error-color);
+    border: 1px solid var(--error-color);
+    display: block;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--secondary-color);
+}
+
+footer i {
+    color: var(--accent-color);
+}
+
+.version {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    opacity: 0.8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.instructions {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    header {
+        padding: 2rem 1rem;
+    }
+
+    .gesture-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .start-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
